@@ -13,7 +13,7 @@ import AppTextInput from "../components/AppTextInput";
 
 const COLORS = { primary: "#282534", white: "#fff" };
 
-const Register = () => {
+const Register = ({ navigation }) => {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.primary }}>
       <StatusBar backgroundColor={COLORS.primary} />
@@ -69,7 +69,7 @@ const Register = () => {
           <View
             style={{
               flexDirection: "row",
-              marginVertical: 20,
+              marginVertical: 30,
             }}
           >
             <Text style={{ color: COLORS.white, fontSize: 14 }}>
