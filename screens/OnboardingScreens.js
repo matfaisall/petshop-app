@@ -10,7 +10,6 @@ import {
   TouchableOpacity,
   Dimensions,
 } from "react-native";
-import { StackActions } from "@react-navigation/native";
 
 const { width, height } = Dimensions.get("window");
 
