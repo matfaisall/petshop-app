@@ -16,7 +16,7 @@ const COLORS = { primary: "#282534", white: "#fff" };
 const Login = ({ navigation }) => {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.primary }}>
-      <StatusBar backgroundColor={COLORS.primary} />
+      <StatusBar backgroundColor={COLORS.primary} barStyle="dark-content" />
       <View style={{ padding: 20 }}>
         <View style={{ alignItems: "center" }}>
           <Text
@@ -44,6 +44,7 @@ const Login = ({ navigation }) => {
             <AppTextInput placeholder="Password" secureTextEntry={true} />
           </View>
           <TouchableOpacity
+            onPress={() => navigation.navigate("HomeScreen")}
             style={{
               padding: 14,
               backgroundColor: "#B05E27",

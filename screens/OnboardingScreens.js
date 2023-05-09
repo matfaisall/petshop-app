@@ -10,29 +10,28 @@ import {
   TouchableOpacity,
   Dimensions,
 } from "react-native";
+import colors from "../assets/colors/__color";
 
 const { width, height } = Dimensions.get("window");
-
-const COLORS = { primary: "#282534", white: "#fff" };
 
 const slides = [
   {
     id: "1",
     image: require("../assets/images/onboarding1.png"),
-    title: "Best Digital Solution",
-    subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "PEW Petshop",
+    subtitle: "Petshop kami menyediakan berbagai keperluan peliharaan anda",
   },
   {
     id: "2",
     image: require("../assets/images/onboarding2.png"),
-    title: "Achieve Your Goals",
-    subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Buat apa bingung?",
+    subtitle: "Pilih hewan yang lucu dan menggemaskan anda mau disini.",
   },
   {
     id: "3",
     image: require("../assets/images/onboarding3.png"),
-    title: "Increase Your Value",
-    subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Cari Dikota Anda",
+    subtitle: "Kami telah tersedia di berbagai kota seluruh Indonesia",
   },
 ];
 
@@ -100,7 +99,7 @@ const OnboardingScreen = ({ navigation }) => {
               style={[
                 styles.indicator,
                 currentSlideIndex == index && {
-                  backgroundColor: COLORS.white,
+                  backgroundColor: colors.brown,
                   width: 25,
                 },
               ]}
@@ -116,7 +115,13 @@ const OnboardingScreen = ({ navigation }) => {
                 style={styles.btn}
                 onPress={() => navigation.replace("Register")}
               >
-                <Text style={{ fontWeight: "bold", fontSize: 15 }}>
+                <Text
+                  style={{
+                    fontWeight: "bold",
+                    fontSize: 15,
+                    color: colors.textwhite,
+                  }}
+                >
                   GET STARTED
                 </Text>
               </TouchableOpacity>
@@ -128,7 +133,7 @@ const OnboardingScreen = ({ navigation }) => {
                 style={[
                   styles.btn,
                   {
-                    borderColor: COLORS.white,
+                    borderColor: colors.brownfull,
                     borderWidth: 1,
                     backgroundColor: "transparent",
                   },
@@ -139,7 +144,7 @@ const OnboardingScreen = ({ navigation }) => {
                   style={{
                     fontWeight: "bold",
                     fontSize: 15,
-                    color: COLORS.white,
+                    color: colors.brownfull,
                   }}
                 >
                   SKIP
@@ -155,6 +160,7 @@ const OnboardingScreen = ({ navigation }) => {
                   style={{
                     fontWeight: "bold",
                     fontSize: 15,
+                    color: colors.textwhite,
                   }}
                 >
                   NEXT
@@ -168,8 +174,8 @@ const OnboardingScreen = ({ navigation }) => {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.primary }}>
-      <StatusBar backgroundColor={COLORS.primary} />
+    <SafeAreaView style={{ flex: 1, backgroundColor: colors.background }}>
+      <StatusBar backgroundColor={colors.background} barStyle="dark-content" />
       <FlatList
         ref={ref}
         onMomentumScrollEnd={updateCurrentSlideIndex}
@@ -187,7 +193,7 @@ const OnboardingScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   subtitle: {
-    color: COLORS.white,
+    color: colors.brown,
     fontSize: 13,
     marginTop: 10,
     maxWidth: "70%",
@@ -195,7 +201,7 @@ const styles = StyleSheet.create({
     lineHeight: 23,
   },
   title: {
-    color: COLORS.white,
+    color: colors.brownfull,
     fontSize: 22,
     fontWeight: "bold",
     marginTop: 20,
@@ -217,7 +223,7 @@ const styles = StyleSheet.create({
     flex: 1,
     height: 50,
     borderRadius: 5,
-    backgroundColor: "#fff",
+    backgroundColor: colors.brownfull,
     justifyContent: "center",
     alignItems: "center",
   },
