@@ -135,7 +135,18 @@ const HomeScreen = () => {
         </View>
         {/* header end */}
         <View style={styles.containerMenu}>
-          <Text>hello</Text>
+          <View>
+            <Text>content</Text>
+          </View>
+          <View>
+            <Text>content</Text>
+          </View>
+          <View>
+            <Text>content</Text>
+          </View>
+          <View>
+            <Text>content</Text>
+          </View>
         </View>
       </View>
     </SafeAreaView>
@@ -186,7 +197,10 @@ const styles = StyleSheet.create({
     padding: 8,
   },
   // styling header end
+
   containerMenu: {
+    flexDirection: "row",
+    justifyContent: "space-between",
     marginTop: 20,
     marginHorizontal: 10,
   },
