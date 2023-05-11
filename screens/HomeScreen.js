@@ -28,6 +28,8 @@ const HomeScreen = () => {
   return (
     <SafeAreaView>
       <StatusBar backgroundColor={colors.background} barStyle="dark-content" />
+
+      {/* Menu Start */}
       <View>
         <View style={styles.headerBox}>
           {/* Search bar */}
@@ -144,50 +146,53 @@ const HomeScreen = () => {
         </View>
         {/* header end */}
         <View style={styles.containerMenu}>
-          <View style={styles.cardMenu}>
+          <TouchableOpacity style={styles.cardMenu}>
             <Image source={grooming} style={{ width: 50, height: 50 }} />
             <Text style={{ marginTop: 4, color: colors.textwhite }}>
               Grooming
             </Text>
-          </View>
+          </TouchableOpacity>
 
-          <View style={styles.cardMenu}>
+          <TouchableOpacity style={styles.cardMenu}>
             <Image source={pethealth} style={{ width: 50, height: 50 }} />
             <Text style={{ marginTop: 4, color: colors.textwhite }}>
               Dokter Hewan
             </Text>
-          </View>
+          </TouchableOpacity>
 
-          <View style={styles.cardMenu}>
+          <TouchableOpacity style={styles.cardMenu}>
             <Image source={safekeeping} style={{ width: 50, height: 50 }} />
             <Text style={{ marginTop: 4, color: colors.textwhite }}>
               Penitipan
             </Text>
-          </View>
+          </TouchableOpacity>
         </View>
         <View style={styles.containerMenu}>
-          <View style={styles.cardMenu}>
+          <TouchableOpacity style={styles.cardMenu}>
             <Image source={vitamin} style={{ width: 50, height: 50 }} />
             <Text style={{ marginTop: 4, color: colors.textwhite }}>
               Vitamin
             </Text>
-          </View>
+          </TouchableOpacity>
 
-          <View style={styles.cardMenu}>
+          <TouchableOpacity style={styles.cardMenu}>
             <Image source={food} style={{ width: 50, height: 50 }} />
             <Text style={{ marginTop: 4, color: colors.textwhite }}>
               Makanan
             </Text>
-          </View>
+          </TouchableOpacity>
 
-          <View style={styles.cardMenu}>
+          <TouchableOpacity style={styles.cardMenu}>
             <Image source={accessories} style={{ width: 50, height: 50 }} />
             <Text style={{ marginTop: 4, color: colors.textwhite }}>
               Aksesoris
             </Text>
-          </View>
+          </TouchableOpacity>
         </View>
       </View>
+      {/* Menu End */}
+
+      <View></View>
     </SafeAreaView>
   );
 };
