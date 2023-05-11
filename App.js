@@ -58,7 +58,7 @@ const App = () => {
                 style={{
                   // centring Tab Button...
                   position: "absolute",
-                  top: 20,
+                  top: 18,
                 }}
               >
                 <Feather
@@ -80,7 +80,7 @@ const App = () => {
                 style={{
                   // centring Tab Button...
                   position: "absolute",
-                  top: 20,
+                  top: 18,
                 }}
               >
                 <Feather
@@ -102,7 +102,7 @@ const App = () => {
                 style={{
                   // centring Tab Button...
                   position: "absolute",
-                  top: 20,
+                  top: 18,
                 }}
               >
                 <Ionicons
@@ -124,7 +124,7 @@ const App = () => {
                 style={{
                   // centring Tab Button...
                   position: "absolute",
-                  top: 20,
+                  top: 18,
                 }}
               >
                 <Feather

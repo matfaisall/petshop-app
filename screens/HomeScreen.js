@@ -7,11 +7,20 @@ import {
   Dimensions,
   TextInput,
   TouchableOpacity,
+  Image,
 } from "react-native";
 import { StatusBar } from "expo-status-bar";
+
 import colors from "../assets/colors/__color";
 
 import { Entypo, FontAwesome, Ionicons } from "@expo/vector-icons";
+// import icons menu
+import grooming from "../assets/menu-icons/pet-grooming.png";
+import pethealth from "../assets/menu-icons/pet-health.png";
+import safekeeping from "../assets/menu-icons/safekeeping.png";
+import vitamin from "../assets/menu-icons/vitamin.png";
+import food from "../assets/menu-icons/food.png";
+import accessories from "../assets/menu-icons/accessories.png";
 
 const { width, height } = Dimensions.get("window");
 
@@ -135,17 +144,47 @@ const HomeScreen = () => {
         </View>
         {/* header end */}
         <View style={styles.containerMenu}>
-          <View>
-            <Text>content</Text>
+          <View style={styles.cardMenu}>
+            <Image source={grooming} style={{ width: 50, height: 50 }} />
+            <Text style={{ marginTop: 4, color: colors.textwhite }}>
+              Grooming
+            </Text>
           </View>
-          <View>
-            <Text>content</Text>
+
+          <View style={styles.cardMenu}>
+            <Image source={pethealth} style={{ width: 50, height: 50 }} />
+            <Text style={{ marginTop: 4, color: colors.textwhite }}>
+              Dokter Hewan
+            </Text>
           </View>
-          <View>
-            <Text>content</Text>
+
+          <View style={styles.cardMenu}>
+            <Image source={safekeeping} style={{ width: 50, height: 50 }} />
+            <Text style={{ marginTop: 4, color: colors.textwhite }}>
+              Penitipan
+            </Text>
           </View>
-          <View>
-            <Text>content</Text>
+        </View>
+        <View style={styles.containerMenu}>
+          <View style={styles.cardMenu}>
+            <Image source={vitamin} style={{ width: 50, height: 50 }} />
+            <Text style={{ marginTop: 4, color: colors.textwhite }}>
+              Vitamin
+            </Text>
+          </View>
+
+          <View style={styles.cardMenu}>
+            <Image source={food} style={{ width: 50, height: 50 }} />
+            <Text style={{ marginTop: 4, color: colors.textwhite }}>
+              Makanan
+            </Text>
+          </View>
+
+          <View style={styles.cardMenu}>
+            <Image source={accessories} style={{ width: 50, height: 50 }} />
+            <Text style={{ marginTop: 4, color: colors.textwhite }}>
+              Aksesoris
+            </Text>
           </View>
         </View>
       </View>
@@ -198,11 +237,22 @@ const styles = StyleSheet.create({
   },
   // styling header end
 
+  // styling menu start
   containerMenu: {
     flexDirection: "row",
     justifyContent: "space-between",
     marginTop: 20,
-    marginHorizontal: 10,
+    marginHorizontal: 16,
+    gap: 16,
+  },
+
+  cardMenu: {
+    flex: 1,
+    paddingVertical: 10,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: colors.brown,
+    borderRadius: 8,
   },
 });
 

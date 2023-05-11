@@ -1,5 +1,5 @@
 const white = "#F6FFDE";
-const textlight = "#F5F4F4";
+const textlight = "#FFFFFF"; //"#F5F4F4"
 const black = "2B2B28";
 const gray = "#63686E";
 const brown = "#C58940";
