@@ -4,7 +4,7 @@ import React from "react";
 const Shop = () => {
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Shop</Text>
+      <Text>Screen Shop</Text>
     </View>
   );
 };
