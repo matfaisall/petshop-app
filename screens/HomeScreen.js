@@ -192,7 +192,32 @@ const HomeScreen = () => {
       </View>
       {/* Menu End */}
 
-      <View></View>
+      <View style={{ marginHorizontal: 16, marginVertical: 16 }}>
+        <View>
+          <Text
+            style={{
+              color: colors.brownfull,
+              fontSize: 16,
+              fontWeight: "bold",
+              marginBottom: 12,
+            }}
+          >
+            Rekomendasi Pilihan
+          </Text>
+        </View>
+
+        <View
+          style={{
+            backgroundColor: "chocolate",
+            height: height * 0.23,
+            justifyContent: "center",
+            alignItems: "center",
+            borderRadius: 10,
+          }}
+        >
+          <Text>Slider Image</Text>
+        </View>
+      </View>
     </SafeAreaView>
   );
 };
