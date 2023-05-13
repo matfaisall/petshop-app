@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   cardView: {
     flex: 1,
     width: width - 25,
-    height: height / 4.5,
+    height: height / 4.2,
     margin: 10,
     borderRadius: 10,
     shadowColor: "#000",
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
   },
   image: {
     width: width - 25,
-    height: height / 4.5,
+    height: height / 4.2,
     borderRadius: 10,
   },
   itemTitle: {

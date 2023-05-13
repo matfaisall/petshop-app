@@ -7,7 +7,13 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 // import icons and colors
-import { Feather, Ionicons } from "@expo/vector-icons";
+import {
+  Feather,
+  Ionicons,
+  Entypo,
+  MaterialCommunityIcons,
+  FontAwesome,
+} from "@expo/vector-icons";
 import colors from "./assets/colors/__color";
 
 // import screen
@@ -38,10 +44,10 @@ function Home() {
           headerShown: false,
           tabBarIcon: ({ focused }) => (
             <View style={styles.iconPosition}>
-              <Feather
+              <Entypo
                 name="home"
-                size={26}
-                color={focused ? colors.brownfull : colors.gray}
+                size={27}
+                color={focused ? colors.brownfull : "white"}
               />
             </View>
           ),
@@ -55,10 +61,10 @@ function Home() {
           headerShown: false,
           tabBarIcon: ({ focused }) => (
             <View style={styles.iconPosition}>
-              <Feather
-                name="shopping-cart"
+              <MaterialCommunityIcons
+                name="shopping"
                 size={26}
-                color={focused ? colors.brownfull : colors.gray}
+                color={focused ? colors.brownfull : "white"}
               />
             </View>
           ),
@@ -73,9 +79,9 @@ function Home() {
           tabBarIcon: ({ focused }) => (
             <View style={styles.iconPosition}>
               <Ionicons
-                name="chatbubbles-outline"
+                name="chatbubbles"
                 size={26}
-                color={focused ? colors.brownfull : colors.gray}
+                color={focused ? colors.brownfull : "white"}
               />
             </View>
           ),
@@ -89,10 +95,10 @@ function Home() {
           headerShown: false,
           tabBarIcon: ({ focused }) => (
             <View style={styles.iconPosition}>
-              <Feather
+              <FontAwesome
                 name="user"
                 size={26}
-                color={focused ? colors.brownfull : colors.gray}
+                color={focused ? colors.brownfull : "white"}
               />
             </View>
           ),
@@ -135,10 +141,10 @@ export default Navigator;
 
 const styles = StyleSheet.create({
   menubarContainer: {
-    backgroundColor: "white",
+    backgroundColor: colors.brown,
     position: "absolute",
     marginHorizontal: 10,
-    bottom: 20,
+    bottom: 10,
     borderRadius: 10,
     height: 60,
     shadowColor: "#000",

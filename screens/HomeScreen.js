@@ -26,20 +26,25 @@ import accessories from "../assets/menu-icons/accessories.png";
 import { dummyData } from "../data/Data";
 import Carousel from "../components/Carousel";
 
+// import Linear Gradient
+import { LinearGradient } from "expo-linear-gradient";
+
 const { width, height } = Dimensions.get("window");
 
 const HomeScreen = () => {
   return (
     <SafeAreaView>
-      <StatusBar backgroundColor={colors.background} barStyle="dark-content" />
+      <StatusBar backgroundColor={colors.brown} barStyle="light-content" />
 
       {/* Menu Start */}
       <View>
         <View style={styles.headerBox}>
+          {/* container card e-wallet */}
+          {/* <LinearGradient
+            colors={["rgba(0,0,0,0.8)", "transparent"]}
+          > */}
           {/* Search bar */}
           <TextInput placeholder="Search" style={styles.searchHaeder} />
-
-          {/* container card e-wallet */}
           <View style={styles.paymentBox}>
             <View style={styles.paymentCard}>
               <View
@@ -147,26 +152,27 @@ const HomeScreen = () => {
             </TouchableOpacity>
             {/* Button Case Out end */}
           </View>
+          {/* </LinearGradient> */}
         </View>
         {/* header end */}
         <View style={styles.containerMenu}>
           <TouchableOpacity style={styles.cardMenu}>
             <Image source={grooming} style={{ width: 50, height: 50 }} />
-            <Text style={{ marginTop: 4, color: colors.textwhite }}>
+            <Text style={{ marginTop: 4, color: colors.brownfull }}>
               Grooming
             </Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.cardMenu}>
             <Image source={pethealth} style={{ width: 50, height: 50 }} />
-            <Text style={{ marginTop: 4, color: colors.textwhite }}>
+            <Text style={{ marginTop: 4, color: colors.brownfull }}>
               Dokter Hewan
             </Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.cardMenu}>
             <Image source={safekeeping} style={{ width: 50, height: 50 }} />
-            <Text style={{ marginTop: 4, color: colors.textwhite }}>
+            <Text style={{ marginTop: 4, color: colors.brownfull }}>
               Penitipan
             </Text>
           </TouchableOpacity>
@@ -174,21 +180,21 @@ const HomeScreen = () => {
         <View style={styles.containerMenu}>
           <TouchableOpacity style={styles.cardMenu}>
             <Image source={vitamin} style={{ width: 50, height: 50 }} />
-            <Text style={{ marginTop: 4, color: colors.textwhite }}>
+            <Text style={{ marginTop: 4, color: colors.brownfull }}>
               Vitamin
             </Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.cardMenu}>
             <Image source={food} style={{ width: 50, height: 50 }} />
-            <Text style={{ marginTop: 4, color: colors.textwhite }}>
+            <Text style={{ marginTop: 4, color: colors.brownfull }}>
               Makanan
             </Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.cardMenu}>
             <Image source={accessories} style={{ width: 50, height: 50 }} />
-            <Text style={{ marginTop: 4, color: colors.textwhite }}>
+            <Text style={{ marginTop: 4, color: colors.brownfull }}>
               Aksesoris
             </Text>
           </TouchableOpacity>
@@ -273,7 +279,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: colors.brown,
+    // backgroundColor: colors.brown,
     borderRadius: 8,
   },
 });
