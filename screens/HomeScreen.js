@@ -22,6 +22,10 @@ import vitamin from "../assets/menu-icons/vitamin.png";
 import food from "../assets/menu-icons/food.png";
 import accessories from "../assets/menu-icons/accessories.png";
 
+// Carousel dan data
+import { dummyData } from "../data/Data";
+import Carousel from "../components/Carousel";
+
 const { width, height } = Dimensions.get("window");
 
 const HomeScreen = () => {
@@ -192,32 +196,20 @@ const HomeScreen = () => {
       </View>
       {/* Menu End */}
 
-      <View style={{ marginHorizontal: 16, marginVertical: 16 }}>
+      <View style={{ marginHorizontal: 16, marginVertical: 14 }}>
         <View>
           <Text
             style={{
               color: colors.brownfull,
               fontSize: 16,
               fontWeight: "bold",
-              marginBottom: 12,
             }}
           >
             Rekomendasi Pilihan
           </Text>
         </View>
-
-        <View
-          style={{
-            backgroundColor: "chocolate",
-            height: height * 0.23,
-            justifyContent: "center",
-            alignItems: "center",
-            borderRadius: 10,
-          }}
-        >
-          <Text>Slider Image</Text>
-        </View>
       </View>
+      <Carousel data={dummyData} />
     </SafeAreaView>
   );
 };

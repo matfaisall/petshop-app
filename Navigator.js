@@ -105,7 +105,7 @@ function Home() {
 const Navigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName="HomeScreen">
         <Stack.Screen
           name="Onboarding"
           component={OnboardingScreen}

@@ -2,11 +2,7 @@ import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 
 const Shop = () => {
-  return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Screen Shop</Text>
-    </View>
-  );
+  return <View></View>;
 };
 
 export default Shop;
